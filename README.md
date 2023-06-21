@@ -1,3 +1,5 @@
+# Work in progress
+
 # spring-boot-starter-openai
 Auto-configuration module for OpenAI usage
 
