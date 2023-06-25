@@ -8,11 +8,38 @@
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>io.github.ugwun</groupId>
 	<artifactId>springbootstarteropenai</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springbootstarteropenai</name>
-	<description>Auto-configuration module for OpenAI usage</description>
+	<packaging>jar</packaging>
+
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>SpringBoot Auto-configuration module for OpenAI usage</description>
+	<url>https://github.com/ugwun/spring-boot-starter-openai</url>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Cyril Sadovsky</name>
+			<email>springbootstarteropenai@gmail.com</email>
+			<organization>ugwun</organization>
+			<organizationUrl>https://github.com/ugwun</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/ugwun/spring-boot-starter-openai.git</connection>
+		<developerConnection>scm:git:ssh://github.com:ugwun/spring-boot-starter-openai.git</developerConnection>
+		<url>http://github.com/ugwun/spring-boot-starter-openai/tree/main</url>
+	</scm>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
