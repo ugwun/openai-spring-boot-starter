@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.aiisforhumans.springbootstarteropenai.configuration.OpenAIAutoconfiguration
+  io.github.ugwun.springbootstarteropenai.configuration.OpenAIAutoconfiguration

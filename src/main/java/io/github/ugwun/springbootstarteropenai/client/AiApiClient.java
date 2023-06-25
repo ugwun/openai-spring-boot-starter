@@ -1,4 +1,4 @@
-package com.aiisforhumans.springbootstarteropenai.client;
+package io.github.ugwun.springbootstarteropenai.client;
 
 import java.io.IOException;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package com.aiisforhumans.springbootstarteropenai;
+package io.github.ugwun.springbootstarteropenai;
 
-import com.aiisforhumans.springbootstarteropenai.client.AiApiClient;
+import io.github.ugwun.springbootstarteropenai.client.AiApiClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

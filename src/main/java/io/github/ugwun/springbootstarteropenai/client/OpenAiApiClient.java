@@ -1,4 +1,4 @@
-package com.aiisforhumans.springbootstarteropenai.client;
+package io.github.ugwun.springbootstarteropenai.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.MediaType;

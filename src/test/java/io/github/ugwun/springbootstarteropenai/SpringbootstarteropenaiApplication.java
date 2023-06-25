@@ -1,4 +1,4 @@
-package com.aiisforhumans.springbootstarteropenai;
+package io.github.ugwun.springbootstarteropenai;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
