@@ -2,6 +2,26 @@
 The main goal is to create a simple and easy to use library for OpenAI API.
 Short term goals:
 * [ ] OpenAI integration
+  * Prototype is ready
+  * set OpenAPI token in application.properties: openai.api.token={your API token} (https://platform.openai.com/account/api-keys)
+  * inject AiApiClient bean in your class
+  ```java
+    @Autowired
+    private AiApiClient aiApiClient;
+    ```
+  * usage:
+  ```java
+    Map<String, String>[] messages = new Map[]{
+            Map.of("role", "system", "content", "You are a helpful assistant."),
+            Map.of("role", "user", "content", "Who won the world series in 2020?")
+    };
+
+    try {
+        return client.generateChatMessage("gpt-3.5-turbo", messages);
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }
+  ```
 * [ ] Azure OpenAI integration
 * [x] Maven SNAPSHOT release
   * SNAPSHOT version can be found at https://s01.oss.sonatype.org/content/repositories/snapshots/io/github/ugwun/openaispringbootstarter
