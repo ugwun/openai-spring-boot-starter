@@ -1,4 +1,4 @@
-package io.github.ugwun.springbootstarteropenai;
+package io.github.ugwun.openaispringbootstarter;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

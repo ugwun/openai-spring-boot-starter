@@ -1,4 +1,4 @@
-package io.github.ugwun.springbootstarteropenai.client;
+package io.github.ugwun.openaispringbootstarter.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.MediaType;

@@ -10,13 +10,13 @@
 	</parent>
 
 	<groupId>io.github.ugwun</groupId>
-	<artifactId>springbootstarteropenai</artifactId>
+	<artifactId>openaispringbootstarter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>SpringBoot Auto-configuration module for OpenAI usage</description>
-	<url>https://github.com/ugwun/spring-boot-starter-openai</url>
+	<url>https://github.com/ugwun/openai-spring-boot-starter</url>
 
 	<licenses>
 		<license>
@@ -35,9 +35,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/ugwun/spring-boot-starter-openai.git</connection>
-		<developerConnection>scm:git:ssh://github.com:ugwun/spring-boot-starter-openai.git</developerConnection>
-		<url>http://github.com/ugwun/spring-boot-starter-openai/tree/main</url>
+		<connection>scm:git:git://github.com/ugwun/openai-spring-boot-starter.git</connection>
+		<developerConnection>scm:git:ssh://github.com:ugwun/openai-spring-boot-starter.git</developerConnection>
+		<url>http://github.com/ugwun/openai-spring-boot-starter/tree/main</url>
 	</scm>
 
 	<properties>

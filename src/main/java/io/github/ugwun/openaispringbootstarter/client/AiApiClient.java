@@ -1,4 +1,4 @@
-package io.github.ugwun.springbootstarteropenai.client;
+package io.github.ugwun.openaispringbootstarter.client;
 
 import java.io.IOException;
 import java.util.Map;
