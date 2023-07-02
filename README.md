@@ -48,3 +48,5 @@ Short term goals:
 If you want to contribute, please fork the project and submit a pull request. Unit and SpringBoot integration tests are would be appreciated.
 
 The repo is unstable and under heavy development, so please be patient.
+
+You can read about the progress here: https://medium.com/@cyrilsadovsky/creating-openai-springboot-library-1st-part-e8c6ecbb6b56
