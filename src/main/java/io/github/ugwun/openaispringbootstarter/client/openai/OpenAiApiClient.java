@@ -28,9 +28,13 @@ public class OpenAiApiClient implements AiApiClient {
     /**
      * Constructs an OpenAiApiClient with the provided API key.
      *
-     * @param apiKey The API key for authenticating with OpenAI's API.
+     * @param apiKey       The API key for authenticating with OpenAI's API.
+     * @param objectMapper The Jackson ObjectMapper to use for serializing and deserializing JSON.
+     * @param okHttpClient The OkHttpClient to use for making HTTP requests.
      */
-    public OpenAiApiClient(String apiKey) {
+    public OpenAiApiClient(String apiKey,
+                           ObjectMapper objectMapper,
+                           OkHttpClient okHttpClient) {
         this.apiKey = apiKey;
         this.httpClient = new OkHttpClient();
         this.objectMapper = new ObjectMapper();
