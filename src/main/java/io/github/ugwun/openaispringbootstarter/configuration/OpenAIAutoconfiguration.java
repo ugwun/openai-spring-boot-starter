@@ -1,7 +1,7 @@
 package io.github.ugwun.openaispringbootstarter.configuration;
 
 import io.github.ugwun.openaispringbootstarter.client.AiApiClient;
-import io.github.ugwun.openaispringbootstarter.client.OpenAiApiClient;
+import io.github.ugwun.openaispringbootstarter.client.openai.OpenAiApiClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
