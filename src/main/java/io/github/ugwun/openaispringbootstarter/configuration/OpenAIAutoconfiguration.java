@@ -2,6 +2,7 @@ package io.github.ugwun.openaispringbootstarter.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.ugwun.openaispringbootstarter.client.AiApiClient;
+import io.github.ugwun.openaispringbootstarter.client.openai.OpenAIConstants;
 import io.github.ugwun.openaispringbootstarter.client.openai.OpenAiApiClient;
 import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,7 +31,7 @@ public class OpenAIAutoconfiguration {
     @Bean
     @ConditionalOnMissingBean
     public AiApiClient openAIApiClient() {
-        return new OpenAiApiClient(apiKey, objectMapper(), okHttpClient());
+        return new OpenAiApiClient(apiKey, objectMapper(), okHttpClient(), OpenAIConstants.ASSISTANTS_BASE_URL);
     }
 
 }

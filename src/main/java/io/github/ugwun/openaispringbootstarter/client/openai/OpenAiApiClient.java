@@ -22,7 +22,7 @@ public class OpenAiApiClient implements AiApiClient {
     private final String apiKey;
     private final OkHttpClient httpClient;
     private final ObjectMapper objectMapper;
-    private static final String ASSISTANTS_BASE_URL = "https://api.openai.com/v1/assistants";
+    private final String assistantsUrl;
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
     /**
@@ -34,10 +34,12 @@ public class OpenAiApiClient implements AiApiClient {
      */
     public OpenAiApiClient(String apiKey,
                            ObjectMapper objectMapper,
-                           OkHttpClient okHttpClient) {
+                           OkHttpClient okHttpClient,
+                           String assistantsUrl) {
         this.apiKey = apiKey;
-        this.httpClient = new OkHttpClient();
-        this.objectMapper = new ObjectMapper();
+        this.httpClient = okHttpClient;
+        this.objectMapper = objectMapper;
+        this.assistantsUrl = assistantsUrl;
     }
 
     /**
@@ -57,7 +59,7 @@ public class OpenAiApiClient implements AiApiClient {
         RequestBody body = RequestBody.Companion.create(objectMapper.writeValueAsString(data).getBytes(), JSON);
 
         Request request = new Request.Builder()
-                .url(ASSISTANTS_BASE_URL)
+                .url(assistantsUrl)
                 .addHeader("Authorization", "Bearer " + apiKey)
                 .addHeader("OpenAI-Beta", "assistants=v1")
                 .post(body)
@@ -78,7 +80,7 @@ public class OpenAiApiClient implements AiApiClient {
     @Override
     public String retrieveAssistant(String assistantId) throws IOException {
         Request request = new Request.Builder()
-                .url(ASSISTANTS_BASE_URL + "/" + assistantId)
+                .url(assistantsUrl + "/" + assistantId)
                 .addHeader("Authorization", "Bearer " + apiKey)
                 .addHeader("OpenAI-Beta", "assistants=v1")
                 .get()
@@ -105,7 +107,7 @@ public class OpenAiApiClient implements AiApiClient {
         RequestBody body = RequestBody.Companion.create(objectMapper.writeValueAsString(data).getBytes(), JSON);
 
         Request request = new Request.Builder()
-                .url(ASSISTANTS_BASE_URL + "/" + assistantId)
+                .url(assistantsUrl + "/" + assistantId)
                 .addHeader("Authorization", "Bearer " + apiKey)
                 .addHeader("OpenAI-Beta", "assistants=v1")
                 .post(body)
@@ -126,7 +128,7 @@ public class OpenAiApiClient implements AiApiClient {
     @Override
     public String deleteAssistant(String assistantId) throws IOException {
         Request request = new Request.Builder()
-                .url(ASSISTANTS_BASE_URL + "/" + assistantId)
+                .url(assistantsUrl + "/" + assistantId)
                 .addHeader("Authorization", "Bearer " + apiKey)
                 .addHeader("OpenAI-Beta", "assistants=v1")
                 .delete()
@@ -149,7 +151,7 @@ public class OpenAiApiClient implements AiApiClient {
     @Override
     public String listAssistants(AssistantListQueryBuilder queryBuilder) throws IOException {
         Map<String, String> queryParams = queryBuilder.build();
-        HttpUrl.Builder urlBuilder = Objects.requireNonNull(HttpUrl.parse(ASSISTANTS_BASE_URL)).newBuilder();
+        HttpUrl.Builder urlBuilder = Objects.requireNonNull(HttpUrl.parse(assistantsUrl)).newBuilder();
         queryParams.forEach(urlBuilder::addQueryParameter);
 
         Request request = new Request.Builder()
