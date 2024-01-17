@@ -1,3 +1,10 @@
+# Update
+This small library will be used only for demonstration/tutorial purposes. If you are looking for production Java library, please have look at LangChain4J: https://github.com/langchain4j/langchain4j
+
+You can read tutorials on developing this library with GPT-4 and Github Copilot here: 
+* https://medium.com/@cyrilsadovsky/creating-openai-springboot-library-1st-part-e8c6ecbb6b56
+* https://medium.com/aimonks/creating-openai-springboot-library-using-gpt-4-and-github-copilot-2st-part-58c1cbdf16d2
+---
 # Work in progress
 The main goal is to create a simple and easy to use library for OpenAI API.
 Short term goals:
@@ -48,5 +55,3 @@ Short term goals:
 If you want to contribute, please fork the project and submit a pull request. Unit and SpringBoot integration tests are would be appreciated.
 
 The repo is unstable and under heavy development, so please be patient.
-
-You can read about the progress here: https://medium.com/@cyrilsadovsky/creating-openai-springboot-library-1st-part-e8c6ecbb6b56
